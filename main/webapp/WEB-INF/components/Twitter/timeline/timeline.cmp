@@ -1,0 +1,13 @@
+<aura:component>
+
+    <aura:handler event="Twitter:tweet" action="{!c.receiveTweet}"/>
+    <aura:attribute name="tweet" type="String" default=""/>
+    
+    <div class="timeline">
+    	<div class="tweetOutput">
+    		<ui:outputTextArea aura:id="tweetOutput" value="{!v.tweet}"/>
+    	</div>
+    </div>
+
+
+</aura:component>

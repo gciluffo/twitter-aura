@@ -1,0 +1,12 @@
+<aura:component>
+	
+  
+    <ul>
+      <ul style="float:center;list-style-type:none;">
+      <li><ui:button label="Home" class="btn" press=""/></li>
+      <li><ui:button label="Me" class="btn" press=""/></li>
+      <li><ui:button label="Login" class="btn" press=""/></li>
+      </ul>
+    </ul>
+
+</aura:component>

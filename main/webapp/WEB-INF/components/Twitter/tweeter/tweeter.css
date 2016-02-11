@@ -1,0 +1,75 @@
+.THIS {
+
+  position: absolute;
+  z-index: 15;
+  top: 45%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  width: 100%;
+
+}
+
+
+.THIS .textBox {
+
+  border: 1px solid #dce4ec;
+  border-radius: 4px;
+  width: 29%;
+  border: 1px solid #4195fc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+  -webkit-box-shadow: 0px 0px 4px #4195fc;
+  -moz-box-shadow: 0px 0px 4px #4195fc;
+   box-shadow: 0px 0px 4px #4195fc;
+}
+
+.THIS.timeline {
+
+  width: 560px;
+  height: 700px;
+  display: block;
+  background-color: #dde1e2;
+  padding-bottom: 2em;
+  box-shadow: #bdc3c7 0 5px 5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 2em;
+  
+  position: absolute;
+  z-index: 15;
+  top: 52%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+
+}
+
+.THIS .tweetOutput {
+
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+  max-width: 468px;
+  background-color: white;
+}
+
+.THIS .tweetButton {
+
+}
+
+.THIS .btn:hover {
+ 
+}
+  

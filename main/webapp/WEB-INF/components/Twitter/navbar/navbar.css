@@ -1,0 +1,51 @@
+.THIS ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 40%;
+    position: absolute;
+    left: 700px;
+}
+
+.THIS li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.THIS li {
+    border-right: none;
+}
+
+.THIS li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.THIS li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.THIS.active {
+    background-color: #4CAF50;
+}
+
+.THIS .btn {
+  background: white;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 9px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.THIS .btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}

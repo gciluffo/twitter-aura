@@ -1,0 +1,19 @@
+.THIS.timeline {
+
+  width: 560px;
+  height: 200px;
+  display: block;
+  background-color: #dde1e2;
+  padding-bottom: 2em;
+  box-shadow: #bdc3c7 0 5px 5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 2em;
+  
+  position: absolute;
+  z-index: 15;
+  top: 52%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+
+}
