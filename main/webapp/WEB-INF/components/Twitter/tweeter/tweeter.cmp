@@ -1,16 +1,14 @@
 <aura:component>
-	
-    <div class="tweetInput">
-        <ui:inputTextArea aura:id="tweetInput" class="textBox" placeholder="max-150 chars"/>
-        <ui:button label="Tweet" class="tweetButton" press="{!c.tweet}"/>
-    </div>
 
-     <div class="timeline">
-    		<ui:outputTextArea aura:id="tweetOutput" class="tweetOutput" value=""/>
-     </div>
+			<aura:attribute name="inputText" type="String" />
 
+		    <div class="tweetInput">
+		        <ui:inputTextArea aura:id="tweetInput" value="{!v.inputText}" placeholder="max-150 chars"/>
+		        <ui:button label="Tweet" class="tweetButton" press="{!c.sendTweet}"/>
+		    </div>
 
 </aura:component>
+
 
 
 

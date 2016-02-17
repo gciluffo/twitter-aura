@@ -1,13 +1,15 @@
 <aura:component>
 
-    <aura:handler event="Twitter:tweet" action="{!c.receiveTweet}"/>
-    <aura:attribute name="tweet" type="String" default=""/>
-    
-    <div class="timeline">
-    	<div class="tweetOutput">
-    		<ui:outputTextArea aura:id="tweetOutput" value="{!v.tweet}"/>
-    	</div>
-    </div>
+    <aura:handler event="Twitter:tweet" action="{!c.receiveTweet}" />
+
+    <aura:attribute name="history" type="Object[]"/>
+
+    <aura:iteration items="{!v.history}" var="aTweet">
+        <h1>{!aTweet.name}</h1>
+        <h2>{!aTweet.message}</h2>
+        <h3>{!aTweet.imageUrl}</h3>
+        <h4>{!aTweet.date}</h4>
+    </aura:iteration>
 
 
 </aura:component>
