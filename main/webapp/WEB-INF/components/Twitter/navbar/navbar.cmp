@@ -1,26 +1,26 @@
-<aura:component>
+ <aura:component>
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<div class="container-fluid">
-	  	<div class="row content">
-		    <div class="col-sm-3 sidenav">
-		      <h4>Twitter</h4>
-		      <ul class="nav nav-pills nav-stacked">
-		        <li class="active"><a href="#section1">Home</a></li>
-		        <li><ui:button label="Home" class="btn" press=""/></li>
-		        <li><ui:button label="Me" class="btn" press=""/></li>
-		        <li><ui:button label="Login" class="btn" press=""/></li>
-		      </ul>
-		      <div class="input-group">
-		        <input type="text" class="form-control" placeholder="Search Tweets.."/>
-		        <span class="input-group-btn">
-		          <button class="btn btn-default" type="button">
-		            <span class="glyphicon glyphicon-search"></span>
-		          </button>
-		        </span>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+	  <div class="container-fluid">
+	  		<div class="page-header">
+			 <h1>Le Twitter</h1>      
+		  	</div>
+      </div>
 
+<div class="container-fluid">
+
+	<ul class="nav nav-pills nav-stacked pull-left" role="tablist" id="sidebar">
+	    <li class="active"><a href="#">Home</a></li>
+	    <li><a href="#">Message</a></li>
+	    <li><a href="#">Account</a></li>
+	    <li><a href="#">Logout</a></li>        
+	</ul>
+
+</div>
+ 
 </aura:component>
+
+<!--
+ <li><ui:button label="Home" class="btn btn-default navbar-btn" press=""/></li>
+ <li><ui:button label="Me" class="btn btn-default navbar-btn" press=""/></li>
+ <li><ui:button label="Login" class="btn btn-default navbar-btn" press=""/></li>
+ -->

@@ -10,7 +10,7 @@
              "name": event.getParam("name"),
              "message": event.getParam("message"),
              "date": event.getParam("date"),
-             "imageUrl": event.getParam("imageUrl")
+             "imagesrc": event.getParam("imagesrc")
          };
 
         var history = component.get("v.history");

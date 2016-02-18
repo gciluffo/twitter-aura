@@ -1,11 +1,11 @@
 <aura:component>
 
-			<aura:attribute name="inputText" type="String" />
+	<aura:attribute name="inputText" type="String" />
 
-		    <div class="tweetInput">
-		        <ui:inputTextArea aura:id="tweetInput" value="{!v.inputText}" placeholder="max-150 chars"/>
-		        <ui:button label="Tweet" class="tweetButton" press="{!c.sendTweet}"/>
-		    </div>
+    <div class="fluid-container">
+        <ui:inputTextArea aura:id="tweetInput" class="form-control" value="{!v.inputText}" placeholder="What is you thinking"/>
+        <ui:button label="Tweet" class="btn btn-primary pull-right" press="{!c.sendTweet}"/>
+    </div>
 
 </aura:component>
 

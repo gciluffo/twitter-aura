@@ -9,9 +9,13 @@
             "name": "Griffin",
             "date": new Date(),
             "message": message,
-            "imageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            "imagesrc": "/img/defualtprofilepic.png"
         });
-        tweetEvent.fire();
+
+        // If the message is empty
+        if(message){
+            tweetEvent.fire();
+        }
         component.set("v.inputText", "");
     }
 })

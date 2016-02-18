@@ -2,3 +2,10 @@
     height: auto;
     padding: 15px;
 }
+
+.THIS #sidebar{
+	position: absolute;
+	top: 27.5%;
+	left: 25%;
+	width: 150px;
+}
