@@ -2,7 +2,7 @@
 
 	<aura:attribute name="inputText" type="String" />
 
-    <div class="fluid-container">
+    <div class="fluid-container"> 
         <ui:inputTextArea aura:id="tweetInput" class="form-control" value="{!v.inputText}" placeholder="What is you thinking"/>
         <ui:button label="Tweet" class="btn btn-primary pull-right" press="{!c.sendTweet}"/>
     </div>

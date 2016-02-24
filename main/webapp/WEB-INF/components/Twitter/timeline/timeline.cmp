@@ -1,12 +1,14 @@
-<aura:component>
+<aura:component controller="java://ui.twitter.HomePageController">
 
+	<aura:handler name="init" action="{!c.init}" value="{!this}" />
     <aura:handler event="Twitter:tweet" action="{!c.receiveTweet}" />
     <aura:attribute name="history" type="Object[]"/>
 
     <div class="fluid-container">
-    	
+	
+			
 		    <aura:iteration items="{!v.history}" var="aTweet">
-		    	<img src="/img/defualtprofilepic.png" class="img-thumbnail pull-left" alt="Cinque Terre" width="40" height="40" />
+		    	<img src="/img/defualtprofilepic.png" class="img-thumbnail pull-left" width="40" height="40" />
 			    <div class="panel panel-default">
 			        <div class="panel-heading">{!aTweet.name}</div>
 			        <div class="panel-body">{!aTweet.message}</div>
@@ -16,4 +18,5 @@
 		    <br></br>
 	    
     </div>
+
 </aura:component>
