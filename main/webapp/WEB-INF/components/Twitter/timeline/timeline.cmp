@@ -6,7 +6,6 @@
 
     <div class="fluid-container">
 	
-			
 		    <aura:iteration items="{!v.history}" var="aTweet">
 		    	<img src="/img/defualtprofilepic.png" class="img-thumbnail pull-left" width="40" height="40" />
 			    <div class="panel panel-default">

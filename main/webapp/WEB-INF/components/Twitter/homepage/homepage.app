@@ -8,6 +8,4 @@
 			<Twitter:navbar/>
 		</div>
 
-
-	
 </aura:application>

@@ -28,7 +28,7 @@
         var tweetAction = component.get("c.getTweets");
 
         tweetAction.setCallback(this, function(a) {
-            if (a.getState() === "SUCCESS") {
+            
                 console.log("Read a tweet" + a.getReturnValue());
                 var newTweet = {
                  "name": "DB",
@@ -42,10 +42,9 @@
                 // Reverse so the tweets are in time order
                 history = history.reverse();
                 component.set("v.history", history);
-            } 
-            else {
-                console.log("Nope");   
-            }
+
+                //console.log("Nope");   
+            
         });
         $A.enqueueAction(tweetAction);
         
