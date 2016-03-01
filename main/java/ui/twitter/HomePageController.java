@@ -30,9 +30,9 @@ public class HomePageController {
     }
 
     @AuraEnabled
-    public static String getTweets() throws Exception {
+    public static ArrayList<Tweet> getTweets() throws Exception {
 
-        ArrayList<String> returnStuff = new ArrayList<String>();
+        ArrayList<Tweet> returnedStuff = new ArrayList<Tweet>();
         try {
         Class.forName("org.h2.Driver");
         Connection conn = DriverManager.getConnection("jdbc:h2:~/Twitter", "gciluffo", "Gooner55");
@@ -44,17 +44,15 @@ public class HomePageController {
 
         while (rs.next()) {
             // Get each column and put them into new objects into the list
-            returnedStuff.append(new Tweet(rs.getString(1), rs.getString(2), "Image", "Today"));
+            returnedStuff.add(new Tweet(rs.getString(1), rs.getString(2), "Image", "Today"));
         }
-        // Just return the first entry from query
-        String something = rs.getString(1);
         //return "Merp"
         conn.close();
-   
-        return something;
+        
+        return returnedStuff;
        }
        catch(Exception e) {
-        return Arrays.toString(e.getStackTrace());
+        return returnedStuff;
        }
   }
 }

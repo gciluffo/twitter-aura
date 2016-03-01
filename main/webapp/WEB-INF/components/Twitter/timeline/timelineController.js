@@ -28,22 +28,13 @@
         var tweetAction = component.get("c.getTweets");
 
         tweetAction.setCallback(this, function(a) {
+                var dbTweets = [];
+                dbTweets = a.getReturnValue();
             
-                console.log("Read a tweet" + a.getReturnValue());
-                var newTweet = {
-                 "name": "DB",
-                 "message": a.getReturnValue(),
-                 "date": "Today",
-                 "imagesrc": ""
-                };
+                console.log("Read " + dbTweets.length + " tweets");
+                console.log(dbTweets[0].name);
 
-                var history = component.get("v.history");
-                history.push(newTweet);
-                // Reverse so the tweets are in time order
-                history = history.reverse();
-                component.set("v.history", history);
 
-                //console.log("Nope");   
             
         });
         $A.enqueueAction(tweetAction);
