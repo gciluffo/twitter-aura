@@ -25,18 +25,28 @@
         $A.enqueueAction(action);
         */
 
-        var tweetAction = component.get("c.getTweets");
-
+        var tweetAction = component.get("c.getAllTweets");
         tweetAction.setCallback(this, function(a) {
+                // Container for tweet objects from database
                 var dbTweets = [];
                 dbTweets = a.getReturnValue();
-            
-                console.log("Read " + dbTweets.length + " tweets");
-                console.log(dbTweets[0].name);
+                
+                var history = component.get("v.history");
+                for (var i = 0; i < dbTweets.length; i++) {
+                    var newTweet = {
+                     "name": dbTweets[i].username,
+                     "message": dbTweets[i].message,
+                     "date": dbTweets[i].date,
+                     "imgpath": dbTweets[i].imgPath
+                    };
+                    console.log(newTweet.name);
+                    history.push(newTweet);
+                }
 
-
-            
+                history = history.reverse();
+                component.set("v.history", history);
         });
+
         $A.enqueueAction(tweetAction);
         
     },
@@ -51,12 +61,14 @@
              "name": event.getParam("name"),
              "message": event.getParam("message"),
              "date": event.getParam("date"),
-             "imagesrc": event.getParam("imagesrc")
+             "imagepath": event.getParam("imgpath")
          };
 
         var history = component.get("v.history");
-        history.push(newTweet);
         // Reverse so the tweets are in time order
+        history = history.reverse();
+
+        history.push(newTweet);
         history = history.reverse();
         component.set("v.history", history);
 

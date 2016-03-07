@@ -1,4 +1,4 @@
-<aura:component>
+<aura:component controller="java://ui.twitter.HomePageController">
 
 	<aura:attribute name="inputText" type="String" />
 
@@ -6,6 +6,7 @@
         <ui:inputTextArea aura:id="tweetInput" class="form-control" value="{!v.inputText}" placeholder="What is you thinking"/>
         <ui:button label="Tweet" class="btn btn-primary pull-right" press="{!c.sendTweet}"/>
     </div>
+
 
 </aura:component>
 

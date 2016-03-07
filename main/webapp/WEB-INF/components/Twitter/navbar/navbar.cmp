@@ -16,11 +16,4 @@
 	</ul>
 
 </div>
- 
 </aura:component>
-
-<!--
- <li><ui:button label="Home" class="btn btn-default navbar-btn" press=""/></li>
- <li><ui:button label="Me" class="btn btn-default navbar-btn" press=""/></li>
- <li><ui:button label="Login" class="btn btn-default navbar-btn" press=""/></li>
- -->

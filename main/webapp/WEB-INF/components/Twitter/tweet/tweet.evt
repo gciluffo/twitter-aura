@@ -4,6 +4,6 @@
     <aura:attribute name="name" type="String"/>
     <aura:attribute name="message" type="String"/>
     <aura:attribute name="date" type="String"/>
-    <aura:attribute name="imagesrc" type="String"/>
+    <aura:attribute name="imgpath" type="String"/>
     
 </aura:event>
