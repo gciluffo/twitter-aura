@@ -75,5 +75,20 @@
         for (i=0; i < history.length; i++) {
             console.log("History[" + i + "] = " + JSON.stringify(history[i]));
         }
-     }
+     },
+     cleanUp : function(component, event, helper) {
+         // Then add the tweet to the database
+            var action = component.get("c.removeTestRows");
+            action.setCallback(this, function(response) {
+                if (response.getState() === "SUCCESS") {
+                    console.log("Server responded");
+                }
+                else {
+                    console.log("Nope");
+                }
+            });
+
+            $A.enqueueAction(action);
+    }
+
 })

@@ -78,4 +78,25 @@ public class HomePageController {
         
        }
   }
+
+    // Remove test data from DB
+    @AuraEnabled
+    public static void removeTestRows() throws Exception {
+
+        try {
+        Class.forName("org.h2.Driver");
+        Connection conn = DriverManager.getConnection("jdbc:h2:~/Twitter", "gciluffo", "Gooner55");
+
+        ResultSet rs = conn.prepareStatement("SELECT * FROM TWEETS").executeQuery();
+        String deleteQuery = "DELETE FROM TWEETS WHERE MESSAGE = 'Silenium'";
+        boolean deleteResult = conn.prepareStatement(deleteQuery).execute();
+        
+        //return "Merp"
+        conn.close();
+      
+       }
+       catch(Exception e) {
+        
+       }
+  }
 }

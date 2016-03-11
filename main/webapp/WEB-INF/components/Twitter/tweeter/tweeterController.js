@@ -1,5 +1,6 @@
 ({
     sendTweet : function(component, event, helper) {
+        
         var message = component.find("tweetInput").get("v.value");
         
         // display the tweet
@@ -12,7 +13,7 @@
         });
 
         // If the message is not empty and is less than 150 characters long
-        if(message && message.length <= 150){
+        if(message && message.length <= 150) {
             tweetEvent.fire();
             
             

@@ -7,10 +7,4 @@
         <ui:button label="Tweet" class="btn btn-primary pull-right" press="{!c.sendTweet}"/>
     </div>
 
-
 </aura:component>
-
-
-
-
-

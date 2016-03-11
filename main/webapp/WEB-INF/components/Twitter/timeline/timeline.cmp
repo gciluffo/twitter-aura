@@ -15,7 +15,13 @@
 			    </div>
 		    </aura:iteration>
 		    <br></br>
-	    
+
+		    <div class="clean">
+	    		<ui:button label="" class="btn btn-primary pull-right" press="{!c.cleanUp}"/>
+	   		</div>
     </div>
 
+<!--
+		
+-->
 </aura:component>
